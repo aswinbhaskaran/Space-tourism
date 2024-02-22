@@ -210,7 +210,7 @@
 		display:table;
 		width:100%
 	}
-	nav #mob, nav #menu-panel-visible
+	nav #mob, nav #menu-panel-visible, nav #menu-flex .menu-no, nav #menu-flex .menu-space
 	{
 		display:none
 	}
@@ -229,20 +229,17 @@
 	}
 	nav #menu
 	{
-		width:450px
-	}
-	nav #menu #menu-flex
-	{
 		height:96px;
-		display:flex;
-		justify-content:space-evenly;
-		align-items:center;
+		width:450px;
 		background-color:#ffffff0a;
 		backdrop-filter:drop-shadow(2px 4px 6px black) blur(16px)
 	}
-	nav #menu-flex .menu-no, nav #menu-flex .menu-space
+	nav #menu #menu-flex
 	{
-		display:none
+		height:100%;
+		display:flex;
+		justify-content:space-evenly;
+		align-items:center
 	}
 	nav #menu-flex a
 	{
@@ -342,6 +339,18 @@
 	{
 		color:white;
 		text-decoration:none
+	}
+	nav #not-mob, nav #menu-panel-visible
+	{
+		display:none;
+	}
+	nav #mob
+	{
+		margin-inline:24px;
+		transform:translateY(24px);
+		display:flex;
+		justify-content:space-between;
+		align-items:center
 	}
 	nav #menu-panel #menu-content
 	{
