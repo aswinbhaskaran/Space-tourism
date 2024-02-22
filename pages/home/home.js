@@ -12,6 +12,8 @@ if((screen.width >= 375) && (screen.width < 768))
 		if(mvisible.getAttribute('style') != null)
 			mvisible.removeAttribute('style');
 	});
-	if(mvisible.getAttribute('style') != null)
-		document.body.addEventListener('click', () => mvisible.removeAttribute('style'));
+	document.body.addEventListener('click', () => {
+		if(mvisible.getAttribute('style') != null)
+			mvisible.removeAttribute('style');
+		});
 }
