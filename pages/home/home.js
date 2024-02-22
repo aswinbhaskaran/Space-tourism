@@ -1,6 +1,8 @@
 let mvisible = document.getElementById('menu-panel-visible');
 let menu = document.getElementById('mob-menu');
 let close = document.getElementById('mob-menu-close');
+let nav = document.querySelector('nav');
+let main = document.querySelector('main');
 
 if((screen.width >= 375) && (screen.width < 768))
 {
@@ -12,8 +14,12 @@ if((screen.width >= 375) && (screen.width < 768))
 		if(mvisible.getAttribute('style') != null)
 			mvisible.removeAttribute('style');
 	});
-	document.body.addEventListener('click', () => {
+	nav.addEventListener('click', () => {
 		if(mvisible.getAttribute('style') != null)
 			mvisible.removeAttribute('style');
-		});
+	});
+	main.addEventListener('click', () => {
+		if(mvisible.getAttribute('style') != null)
+			mvisible.removeAttribute('style');
+	});
 }
