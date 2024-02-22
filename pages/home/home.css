@@ -41,6 +41,15 @@
 	{
 		transform:translateY(40px)
 	}
+	nav #not-mob
+	{
+		display:table;
+		width:100%
+	}
+	nav #mob, nav #menu-panel-visible
+	{
+		display:none
+	}
 	nav #img
 	{
 		width:112px
@@ -195,6 +204,15 @@
 	{
 		color:white;
 		text-decoration:none
+	}
+	nav #not-mob
+	{
+		display:table;
+		width:100%
+	}
+	nav #mob, nav #menu-panel-visible
+	{
+		display:none
 	}
 	nav #img
 	{
