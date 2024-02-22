@@ -47,7 +47,8 @@
 	}
 	nav #img img
 	{
-		transform:translateX(55px)
+		transform:translateX(55px);
+		width:64px
 	}
 	nav #hr
 	{
