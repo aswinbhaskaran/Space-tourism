@@ -1,0 +1,20 @@
+@media screen and (min-width:1440px)/*Desktop*/
+{
+  html
+  {
+    background-image: url(../../../images/destination/background-destination-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+  html, body
+  {
+    height: 100%
+  }
+  body
+  {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-style: noraml;
+    font-size: 1.2rem;
+  }
+}
