@@ -1,0 +1,68 @@
+@media screen and (min-width: 768px) and (max-width: 1439px)
+{
+	html
+	{
+		background-image: url(../../assets/home/background-home-tablet.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	#header
+	{
+		position: relative;
+		height: 96px
+	}
+	#header nav #not-mob
+	{
+		height: 100%;
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0
+	}
+	#header nav #mob, #header nav #menu-flex .menu-no
+	{
+		display: none
+	}
+	#header nav #img
+	{
+		width: 87px;
+		display: flex;
+		align-items: center;
+		position: relative
+	}
+	#header nav #img img
+	{
+		position: absolute;
+		right: 0
+	}
+	#header nav #hr
+	{
+		width: 93px;
+		visibility: hidden;
+		flex-grow: 1
+	}
+	#header nav #menu
+	{
+		height: 100%;
+		width: 450px;
+		background-color: var(--bg-transparent-color-white);
+		backdrop-filter: drop-shadow(2px 4px 6px var(--color-black)) blur(16px);
+		flex-grow: 1
+	}
+	#header nav #menu #menu-flex
+	{
+		height: 100%;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center
+	}
+	#header nav #menu-flex a
+	{
+		height: 100%;
+		display: flex;
+		align-items: center
+	}
+}

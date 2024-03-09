@@ -1,0 +1,73 @@
+@media screen and (min-width: 1440px)
+{
+	main
+	{
+		width: 100%;
+		height: 75%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		position: absolute;
+		bottom: 125px
+	}
+	main #intro-flex
+	{
+		width: 75%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end
+	}
+	main #intro-txt
+	{
+		width: 450px
+	}
+	main #intro-txt *
+	{
+		margin: 0
+	}
+	main #intro-txt h5
+	{
+		font-size: 1.75rem;
+		letter-spacing: .37rem
+	}
+	main #intro-txt h1
+	{
+		font-family: Bellefair, serif;
+		font-style: normal;
+		font-size: 8.2rem;
+		margin-block: 24px
+	}
+	main header *
+	{
+		font-weight: 400
+	}
+	main #intro-txt p
+	{
+		font-family: Barlow, sans-serif;
+		font-style: normal;
+		font-size: 1.1rem;
+		letter-spacing: 0;
+		line-height: 2rem
+	}
+	main #intro-txt h5, main #intro-txt p
+	{
+		color: #d0d6f9
+	}
+	main a
+	{
+		background-color: var(--color-white);
+		color: black;
+		font-size: 2rem;
+		letter-spacing: .13rem;
+		width: 274px;
+		height: 274px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center
+	}
+	main a:hover
+	{
+		box-shadow: 0px 0px 0px 90px #ffffff1a
+	}
+}

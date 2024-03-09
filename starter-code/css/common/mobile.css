@@ -1,0 +1,111 @@
+@media screen and (min-width: 375px) and (max-width: 767px)
+{
+	html
+	{
+		background-image: url(../../assets/home/background-home-mobile.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover
+	}
+	#header
+	{
+		width: 100%;
+		height: 72px;
+		position: relative
+	}
+	#header nav
+	{
+		position: absolute;
+		bottom: 13px;
+		left: 0;
+		right: 0
+	}
+	#header nav #mob
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center
+	}
+	#header nav #not-mob
+	{
+		display: none
+	}
+	#header nav #mob .mob:first-child
+	{
+		width: 72px;
+		position: relative;
+		display: flex;
+		align-items: center
+	}
+	#header nav #mob img[alt='Logo']
+	{
+		position: absolute;
+		right: 0
+	}
+	#header nav #mob .mob:last-child
+	{
+		width: 48px
+	}
+	#header nav #menu-panel #menu-content
+	{
+		height: 100%
+	}
+	#header nav #mob #mob-menu
+	{
+		width: 24px;
+		height: 21px
+	}
+	#header nav #menu-panel-visible
+	{
+		position: absolute;
+		top: -35px;
+		left: 0;
+		right: 0
+	}
+	#header nav #menu-panel
+	{
+		width: 65%;
+		height: 100vh;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+		background-color: var(--bg-transparent-color-white);
+		backdrop-filter: drop-shadow(2px 4px 6px var(--color-black)) blur(16px);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 20px
+	}
+	#header nav #menu-panel #menu-panel-close
+	{
+		width: 48px;
+		height: 57px;
+		position: relative
+	}
+	#header nav #menu-panel img
+	{
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		bottom: 0
+	}
+	#header nav #menu-panel #menu-content
+	{
+		width: 85%;
+		height: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 50px
+	}
+	#header nav #menu-content a
+	{
+		display: flex;
+		gap: 7px
+	}
+	#header nav #menu-content .menu-no
+	{
+		font-weight: 700
+	}
+}
