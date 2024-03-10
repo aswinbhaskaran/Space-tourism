@@ -7,3 +7,6 @@
     a) Free of clutter - Only bottom border
     b) Overview of the project - "
     c) Free flow of ideas - "
+Light blueish bg - #ebebf6
+Dark blueish bg - #d0d5e1
+Cream bg - #f5f7fb
