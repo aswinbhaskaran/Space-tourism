@@ -1,0 +1,47 @@
+.nav-active
+{
+	border-bottom: 3px solid
+}
+.mob-nav-active
+{
+	border-right: 3px solid
+}
+.upper
+{
+	text-transform: uppercase
+}
+.d-none
+{
+	display: none
+}
+.text-color
+{
+	color: var(--color-not-white-nor-black)
+}
+:root
+{
+	--color-white: white;
+	--bg-transparent-color-white: #ffffff0a;
+	--color-black: black;
+	--hr-transparent-color-white: rgb(255, 255, 255, .25);
+	--color-not-white-nor-black: #d0d6f9
+}
+html
+{
+	height: 100vh
+}
+body
+{
+	height: 100%;
+	margin: 0;
+	color: var(--color-white);
+	font-family: 'Barlow Condensed', sans-serif;
+	font-style: normal;
+	font-size: 1.2rem;
+	letter-spacing: .1rem
+}
+a
+{
+	color: var(--color-white);
+	text-decoration: none
+}
