@@ -1,4 +1,4 @@
-let title = document.querySelector('head > title').innerText
+const title = document.querySelector('head > title')
 const destination = document.querySelector('main #destination-section')
 const img = destination.querySelector('img')
 const planet = destination.querySelector('#planet-details')
@@ -46,7 +46,7 @@ for(let link of links)
 						avg.innerText = dest.distance
 						est.innerText = dest.travel
 						
-						title = title.replace(title.split(/[-::]+/)[1], ` ${dest.name} `)
+						title.innerText = title.innerText.replace(title.innerText.split(/[-::]+/)[1], ` ${dest.name} `)
 
 					}
 				}
