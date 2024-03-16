@@ -1,3 +1,4 @@
+const title = document.querySelector('head > title').innerText
 const destination = document.querySelector('main #destination-section')
 const img = destination.querySelector('img')
 const planet = destination.querySelector('#planet-details')
@@ -13,9 +14,22 @@ const est = travel.querySelector('#est-time + span')
 for(let link of links)
 {
 	link.addEventListener('click', e => {
-		let xmlHTTP = new XMLHttpRequest();
 		const element = e.target
 
+		for(let child of nav.children)
+		{
+			if(!child.classList.contains('text-color'))
+				child.classList.add('text-color')
+
+			if(child.classList.contains('nav-active'))
+				child.classList.remove('nav-active')
+		}
+
+		element.classList.add('nav-active')
+		element.classList.remove('text-color')
+		title = title.replace(title.split(/[-::]+/)[1], ` ${element.innerText[0]}${element.innerText.slice(1).toLowerCase()} `)
+
+		const xmlHTTP = new XMLHttpRequest()
 		xmlHTTP.onreadystatechange = r => {
 			let res = r.target
 
@@ -27,17 +41,6 @@ for(let link of links)
 				{
 					if(element.innerText.toLowerCase() == dest.name.toLowerCase())
 					{
-						for(let child of nav.children)
-						{
-							if(!child.classList.contains('text-color'))
-								child.classList.add('text-color')
-
-							if(child.classList.contains('nav-active'))
-								child.classList.remove('nav-active')
-						}
-
-						element.classList.add('nav-active')
-						element.classList.remove('text-color')
 						img.src = `../${dest.images.png}`
 						img.alt = dest.name
 						h1.innerText = dest.name
