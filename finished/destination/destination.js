@@ -1,4 +1,4 @@
-const title = document.querySelector('head > title').innerText
+let title = document.querySelector('head > title').innerText
 const destination = document.querySelector('main #destination-section')
 const img = destination.querySelector('img')
 const planet = destination.querySelector('#planet-details')
