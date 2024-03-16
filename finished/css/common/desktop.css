@@ -67,7 +67,7 @@
 		align-items: center;
 		gap: 7px
 	}
-	#header nav #menu-flex a:not(#header nav-active):hover
+	#header nav #menu-flex a:not(#header .nav-active):hover
 	{
 		border-bottom: 3px solid #ffffff80
 	}
