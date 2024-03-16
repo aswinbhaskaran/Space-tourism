@@ -27,8 +27,6 @@ for(let link of links)
 
 		element.classList.add('nav-active')
 		element.classList.remove('text-color')
-		title = title.replace(title.split(/[-::]+/)[1], ` ${element.innerText[0]}${element.innerText.slice(1).toLowerCase()} `)
-
 		const xmlHTTP = new XMLHttpRequest()
 		xmlHTTP.onreadystatechange = r => {
 			let res = r.target
@@ -47,6 +45,9 @@ for(let link of links)
 						p.innerText = dest.description
 						avg.innerText = dest.distance
 						est.innerText = dest.travel
+						
+						title = title.replace(title.split(/[-::]+/)[1], ` ${dest.name} `)
+
 					}
 				}
 			}
