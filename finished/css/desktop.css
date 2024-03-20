@@ -1,0 +1,106 @@
+@media screen and (min-width: 1440px)
+{
+	body
+	{
+		background-image: url('../../assets/crew/background-crew-desktop.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative
+	}
+	main
+	{
+		position: absolute;
+		inset: 0;
+		display: flex;
+		justify-content: space-evenly
+	}
+	main > div
+	{
+		width: max-content;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly
+	}
+	main #crew-header
+	{
+		font-size: 1.75rem;
+		letter-spacing: .3rem;
+		display: flex;
+		gap: 20px
+	}
+	main #crew-header :first-child
+	{
+		font-weight: 700;
+		opacity: 25%
+	}
+	main #crew-section
+	{
+		display: flex;
+		flex-direction: column;
+		gap: 21px;
+	}
+	main #crew-section header
+	{
+		display: flex;
+		flex-direction: column;
+		gap: 15px
+	}
+	main #crew-section *
+	{
+		margin: 0
+	}
+	main #crew-section :is(h2, h1)
+	{
+		font-family: Bellefair, serif;
+		font-style: normal;
+		letter-spacing: 0;
+		font-weight: 400
+	}
+	main #crew-section h2
+	{
+		opacity: 50%;
+		font-size: 2rem
+	}
+	main #crew-section h1
+	{
+		font-size: 3.5rem
+	}
+	main #crew-section > p
+	{
+		width: 444px;
+		font-size: 1.13rem;
+		line-height: 2rem;
+		letter-spacing: 0;
+		font-family: Barlow, sans-serif;
+		font-style: normal
+	}
+	main #pagination-circles
+	{
+		display: flex;
+		gap: 24px
+	}
+	main #pagination-circles span
+	{
+		width: 15px;
+		aspect-ratio: 1 / 1;
+		border-radius: 50%;
+		background-color: white;
+		align-self: center;
+		cursor: pointer
+	}
+	main #pagination-circles span:not(.page-active)
+	{
+		opacity: 17%
+	}
+	main #pagination-circles span:not(.page-active):hover
+	{
+		opacity: 50%
+	}
+	main > img
+	{
+		width: 568px;
+		height: 712px;
+		align-self: flex-end
+	}
+}
