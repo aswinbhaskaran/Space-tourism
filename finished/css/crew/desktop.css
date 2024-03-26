@@ -1,0 +1,82 @@
+@media screen and (min-width: 1440px)
+{
+    html
+    {
+        background-image: url(../../assets/crew/background-crew-desktop.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative
+    }
+
+    main
+    {
+        position: absolute;
+        inset: 12% 8% 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end
+    }
+    main > div:first-of-type
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: stretch
+    }
+    main #crew-header
+    {
+        font-size: 1.75rem;
+        letter-spacing: .3rem
+    }
+    main #crew-header > :first-child
+    {
+        font-weight: 700;
+        color: var(--hr-transparent-color-white)
+    }
+    main #crew-section
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 15px
+    }
+    main #crew-section > header
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 15px
+    }
+    main #crew-section > p
+    {
+        width: 444px;
+        font-size: 1.13rem;
+        line-height: 2rem
+    }
+    main > div:last-of-type
+    {
+        width: 36dvw;
+        height: 80dvh
+    }
+    main > div:last-of-type > img
+    {
+        height: 100%
+    }
+
+    #crew-section > header > *
+    {
+        font-weight: 400
+    }
+    #crew-section > header > :first-child
+    {
+        font-size: 2rem;
+        color: var(--active-color)
+    }
+    #crew-section > header > :last-child
+    {
+        font-size: 3.5rem
+    }
+    #crew-section :is(header > *, p)
+    {
+        margin: 0
+    }
+}
