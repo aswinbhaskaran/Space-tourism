@@ -60,7 +60,7 @@
         font-size: 2rem;
         letter-spacing: .13rem;
         width: 274px;
-        height: 274px;
+        aspect-ratio: 1 / 1;
         border-radius: 50%;
         display: flex;
         justify-content: center;
