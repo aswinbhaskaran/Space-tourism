@@ -1,0 +1,73 @@
+@media screen and (min-width: 1440px)
+{
+    html
+    {
+        background-image: url(../../assets/home/background-home-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover
+    }
+
+    body
+    {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    main
+    {
+        position: absolute;
+        top: 15%;
+        bottom: 15%;
+        width: clamp(1440px, 82%, 2260px);
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end
+    }
+    main #intro-txt
+    {
+        width: 450px
+    }
+    main #intro-txt *
+    {
+        margin: 0
+    }
+    main #intro-txt h5
+    {
+        font-size: 1.75rem;
+        letter-spacing: .37rem
+    }
+    main #intro-txt h1
+    {
+        font-size: 8.2rem;
+        margin-block: 24px
+    }
+    main header *
+    {
+        font-weight: 400
+    }
+    main #intro-txt p
+    {
+        font-size: 1.1rem;
+        letter-spacing: 0;
+        line-height: 2rem
+    }
+    main a
+    {
+        background-color: var(--color-white);
+        color: black;
+        font-size: 2rem;
+        letter-spacing: .13rem;
+        width: 274px;
+        height: 274px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+    main a:hover
+    {
+        box-shadow: 0 0 0 90px #ffffff1a
+    }
+}
