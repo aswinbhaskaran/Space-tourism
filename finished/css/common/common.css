@@ -31,6 +31,26 @@
     color: var(--color-not-white-nor-black)
 }
 
+.bc
+{
+    font-family: 'Barlow Condensed', sans-serif
+}
+
+.be
+{
+    font-family: Bellefair, serif
+}
+
+.b
+{
+    font-family: Barlow, sans-serif
+}
+
+:is(.bc, .be, .b)
+{
+    font-style: normal
+}
+
 :root
 {
     --color-white: white;
