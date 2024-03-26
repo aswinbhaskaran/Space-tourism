@@ -1,0 +1,114 @@
+@media screen and (min-width: 375px) and (max-width: 767px)
+{
+    html
+    {
+        background-image: url(../../assets/destination/background-destination-mobile.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 119dvh
+    }
+
+    main
+    {
+        height: 92%;
+        position: relative
+    }
+    main > div
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0
+    }
+    main #destination-header
+    {
+        font-size: 1rem;
+        letter-spacing: .17rem;
+        display: flex;
+        gap: 10px
+    }
+    main #destination-header span:first-of-type
+    {
+        color: var(--hr-transparent-color-white);
+        font-weight: 700
+    }
+    main #destination-section
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px
+    }
+    main #destination-section > img
+    {
+        width: 170px
+    }
+    main #planet-details
+    {
+        width: 327px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 11px
+    }
+    main #planet-details nav
+    {
+        font-size: .9rem;
+        letter-spacing: .15rem;
+        display: flex;
+        justify-content: center;
+        gap: 25px
+    }
+    main #planet-details .nav-active
+    {
+        padding-bottom: 8px
+    }
+    main #planet-details h1
+    {
+        font-weight: 400;
+        font-size: 3.5rem;
+        letter-spacing: 0;
+        margin-block: 11px
+    }
+    main #planet-details p
+    {
+        letter-spacing: 0;
+        line-height: 1.56rem;
+        font-size: .9rem;
+        margin: 0
+    }
+    main #planet-details hr
+    {
+        width: 100%;
+        border-color: var(--hr-transparent-color-white)
+    }
+    main #travel-details
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 32px
+    }
+    main #travel-details > div
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px
+    }
+    main #travel-details .question
+    {
+        font-size: .9rem;
+        letter-spacing: .15rem
+    }
+    main #travel-details .answer
+    {
+        font-size: 1.75rem;
+        letter-spacing: 0
+    }
+}
