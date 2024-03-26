@@ -1,0 +1,81 @@
+@media screen and (min-width: 1440px)
+{
+    .nav-active
+    {
+        padding-block: 13px
+    }
+
+    #header
+    {
+        height: 92px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center
+    }
+    #header > nav
+    {
+        position: absolute;
+        bottom: 0;
+        width: clamp(1440px, 100%, 2260px)
+    }
+    #header > nav #menu-panel
+    {
+        display: flex;
+        align-items: center;
+        height: 52px
+    }
+    #header > nav :is(#mob, #menu-panel-close)
+    {
+        display: none
+    }
+    #header > nav #img
+    {
+        width: 103px;
+        align-self: stretch;
+        position: relative
+    }
+    #header #img img
+    {
+        position: absolute;
+        top: 0;
+        right: 0
+    }
+    #header > nav #hr
+    {
+        width: 473px
+    }
+    #header #hr hr
+    {
+        position: relative;
+        z-index: 1;
+        left: 65px;
+        border-color: var(--hr-transparent-color-white)
+    }
+    #header > nav #menu
+    {
+        background-color: var(--bg-transparent-color-white);
+        backdrop-filter: drop-shadow(2px 4px 6px var(--color-black)) blur(16px);
+        flex: 1 850px;
+        align-self: stretch;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center
+    }
+    #header #menu a
+    {
+        display: flex;
+        align-items: center;
+        gap: 7px
+    }
+    #header #menu a:not(#header .nav-active):hover
+    {
+        border-bottom: 3px solid var(--active-color);
+        padding-block: 13px
+    }
+    #header #menu .menu-no
+    {
+        font-weight: 700
+    }
+}
