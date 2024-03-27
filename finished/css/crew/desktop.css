@@ -52,6 +52,10 @@
         font-size: 1.13rem;
         line-height: 2rem
     }
+    main :is(#crew-section > header, #crew-section > p)
+    {
+        letter-spacing: 0
+    }
     main > div:last-of-type
     {
         width: 36dvw;
