@@ -6,15 +6,19 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        position: relative
+        position: relative;
+        display: flex;
+        justify-content: center
     }
 
     main
     {
         position: absolute;
-        inset: 12% 8% 0;
+        top: 12%;
+        bottom: 0;
+        width: clamp(1309px, 82%, 2139px);
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: flex-end
     }
     main > div:first-of-type
