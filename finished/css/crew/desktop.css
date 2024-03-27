@@ -62,7 +62,6 @@
     }
     main > div:last-of-type
     {
-        width: 36dvw;
         height: 80dvh
     }
     main > div:last-of-type > img
