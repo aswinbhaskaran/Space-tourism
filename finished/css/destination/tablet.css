@@ -35,7 +35,7 @@
     main #destination-section
     {
         position: absolute;
-        bottom: 25px;
+        top: 75px;
         width: 573px;
         text-align: center;
         display: flex;
