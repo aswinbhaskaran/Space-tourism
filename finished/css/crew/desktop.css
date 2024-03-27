@@ -72,6 +72,27 @@
     {
         height: 100%
     }
+    main #pagination-circles
+    {
+        display: flex;
+        gap: 16px
+    }
+    main #pagination-circles > span
+    {
+        display: inline-block;
+        width: 10px;
+        aspect-ratio: 1 / 1;
+        background-color: var(--color-white);
+        border-radius: 50%
+    }
+    main #pagination-circles > span:not(.page-active)
+    {
+        opacity: 17%
+    }
+    main #pagination-circles > span:not(.page-active):hover
+    {
+        opacity: 50%
+    }
 
     #crew-section > header > *
     {
