@@ -67,7 +67,9 @@
     }
     main #planet-details .nav-active
     {
-        padding-bottom: 8px
+        padding-bottom: 8px;
+        border-right: none;
+        border-bottom: 3px solid
     }
     main #planet-details h1
     {
