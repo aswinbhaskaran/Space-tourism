@@ -20,41 +20,34 @@
         position: absolute;
         top: 12%;
         bottom: 0;
-        width: clamp(1309px, 82%, 2139px);
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-end
+        width: clamp(1236px, 80%, 2039px);
+        display: grid;
+        grid-template-areas: 'header image' 'section image' 'pagination image';
+        align-items: center
     }
-    main > div:first-of-type
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-self: stretch
-    }
-    main #crew-header
+    main > #crew-header
     {
         font-size: 1.75rem;
         letter-spacing: .3rem
     }
-    main #crew-header > :first-child
+    main > #crew-header > :first-child
     {
         font-weight: 700;
         color: var(--hr-transparent-color-white)
     }
-    main #crew-section
+    main > #crew-section
     {
         display: flex;
         flex-direction: column;
         gap: 15px
     }
-    main #crew-section > header
+    main > #crew-section > header
     {
         display: flex;
         flex-direction: column;
         gap: 15px
     }
-    main #crew-section > p
+    main > #crew-section > p
     {
         width: 444px;
         font-size: 1.13rem;
@@ -64,20 +57,12 @@
     {
         letter-spacing: 0
     }
-    main > div:last-of-type
-    {
-        height: 80dvh
-    }
-    main > div:last-of-type > img
-    {
-        height: 100%
-    }
-    main #pagination-circles
+    main > #pagination-circles
     {
         display: flex;
         gap: 16px
     }
-    main #pagination-circles > span
+    main > #pagination-circles > span
     {
         display: inline-block;
         width: 10px;
@@ -85,13 +70,26 @@
         background-color: var(--color-white);
         border-radius: 50%
     }
-    main #pagination-circles > span:not(.page-active)
+    main > #pagination-circles > span:not(.page-active)
     {
         opacity: 17%
     }
-    main #pagination-circles > span:not(.page-active):hover
+    main > #pagination-circles > span:not(.page-active):hover
     {
         opacity: 50%
+    }
+    main > div:last-of-type
+    {
+        grid-area: image;
+        justify-self: stretch;
+        align-self: stretch;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end
+    }
+    main > div:last-of-type > img
+    {
+        height: 80dvh
     }
 
     #crew-section > header > *
