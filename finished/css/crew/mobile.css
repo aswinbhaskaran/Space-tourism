@@ -7,4 +7,104 @@
         background-repeat: no-repeat;
         background-size: cover
     }
+
+    body
+    {
+        position: relative
+    }
+
+    main
+    {
+        position: absolute;
+        inset: 20vmin 8% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px
+    }
+    main > #crew-header
+    {
+        font-size: 1rem;
+        letter-spacing: .17rem;
+        display: flex;
+        gap: 10px;
+        order: 1
+    }
+    main > #crew-header span:first-of-type
+    {
+        color: var(--hr-transparent-color-white);
+        font-weight: 700
+    }
+    main > #crew-section
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 327px;
+        text-align: center;
+        order: 4
+    }
+    main > #crew-section > header
+    {
+        font-weight: 400;
+        letter-spacing: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px
+    }
+    main > #crew-section > p
+    {
+        letter-spacing: 0;
+        line-height: 1.56rem;
+        font-size: .94rem
+    }
+    main > #crew-section > :is(header > *, p)
+    {
+        margin: 0
+    }
+    main > #pagination-circles
+    {
+        display: flex;
+        gap: 16px;
+        order: 3
+    }
+    main > #pagination-circles > span
+    {
+        display: inline-block;
+        width: 10px;
+        aspect-ratio: 1 / 1;
+        background-color: var(--color-white);
+        border-radius: 50%
+    }
+    main > #pagination-circles > span:not(.page-active)
+    {
+        opacity: 17%
+    }
+    main > div:last-of-type
+    {
+        width: 327px;
+        order: 2;
+        border-bottom: 2px solid var(--hr-transparent-color-white);
+        display: flex;
+        justify-content: center
+    }
+    main > div:last-of-type > img
+    {
+        height: 35dvh
+    }
+
+    #crew-section > header > :first-child
+    {
+        font-size: 1rem;
+        color: var(--active-color)
+    }
+    #crew-section > header > :last-child
+    {
+        font-size: 1.5rem
+    }
+    #crew-section > header > *
+    {
+        font-weight: 400
+    }
 }
