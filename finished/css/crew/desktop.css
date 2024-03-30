@@ -53,7 +53,7 @@
         font-size: 1.13rem;
         line-height: 2rem
     }
-    main :is(#crew-section > header, #crew-section > p)
+    main > #crew-section > :is(header, p)
     {
         letter-spacing: 0
     }
