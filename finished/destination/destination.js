@@ -16,6 +16,8 @@ for(let link of links)
 	link.addEventListener('click', e => {
 		const element = e.target
 
+		const xmlHTTP = new XMLHttpRequest()
+
 		for(let child of nav.children)
 		{
 			if(!child.classList.contains('text-color'))
@@ -27,7 +29,9 @@ for(let link of links)
 
 		element.classList.add('nav-active')
 		element.classList.remove('text-color')
-		const xmlHTTP = new XMLHttpRequest()
+		xmlHTTP.open('GET', './destination.json', false)
+		xmlHTTP.send()
+
 		xmlHTTP.onreadystatechange = r => {
 			let res = r.target
 
@@ -52,7 +56,5 @@ for(let link of links)
 				}
 			}
 		}
-		xmlHTTP.open('GET', './destination.json', false)
-		xmlHTTP.send()
 	})
 }

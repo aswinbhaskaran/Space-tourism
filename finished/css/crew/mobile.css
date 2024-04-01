@@ -59,7 +59,7 @@
         line-height: 1.56rem;
         font-size: .94rem
     }
-    main > #crew-section > :is(header > *, p)
+    main > #crew-section :is(header > *, p)
     {
         margin: 0
     }
