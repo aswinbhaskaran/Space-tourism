@@ -15,7 +15,7 @@
         align-items: center
     }
 
-    :is(main > #destination-section, main > #destination-section > #planet-details, main #planet-details > header)
+    :is(main, main > #destination-section, main > #destination-section > #planet-details, main #planet-details > header)
     {
         display: flex;
         flex-direction: column;
@@ -30,7 +30,6 @@
     main > #destination-header
     {
         display: flex;
-        justify-content: center;
         gap: 18px
     }
     main > #destination-header > span:first-of-type
