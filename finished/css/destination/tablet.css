@@ -8,76 +8,70 @@
         background-size: cover
     }
 
+    :is(main, main > #destination-section, main > #destination-section > #planet-details, main #planet-details > header)
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px
+    }
     main
     {
-        height: 90%;
-        position: relative;
-        bottom: -7px;
-        display: flex;
-        justify-content: center
-    }
-    main #destination-header
-    {
         position: absolute;
-        top: 10px;
-        left: 50px;
-        align-self: flex-start;
-        font-size: 1.25rem;
-        letter-spacing: .21rem;
-        display: flex;
-        gap: 20px
+        inset: 11% 6% 0
     }
-    main #destination-header span:first-of-type
+    main > #destination-header
+    {
+        align-self: flex-start;
+        font-size: 2rem;
+        letter-spacing: .34rem;
+        display: flex;
+        gap: 19px
+    }
+    main > #destination-header > span:first-of-type
     {
         color: var(--hr-transparent-color-white);
         font-weight: 700
     }
-    main #destination-section
+    main > #destination-section
     {
-        position: absolute;
-        top: 75px;
         width: 573px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 36px
+        text-align: center
     }
-    main #destination-section > img
+    main > #destination-section > img
     {
         width: 300px
     }
     main #planet-details nav
     {
-        letter-spacing: .17rem;
+        height: 34px;
         display: flex;
         justify-content: center;
-        gap: 35px;
-        align-items: center
-    }
-    main #planet-details .nav-active
-    {
-        padding-block: 12px
+        align-items: stretch;
+        gap: 36px
     }
     main #planet-details h1
     {
         font-weight: 400;
-        font-size: 5rem;
-        letter-spacing: 0;
-        margin-block: 20px
+        font-size: 8rem
     }
-    main #planet-details p
+    main #planet-details > p
     {
-        letter-spacing: 0;
-        line-height: 1.75rem
+        font-size: 1.6rem;
+        line-height: 2.8rem
     }
-    main #planet-details hr
+    main #planet-details > hr
     {
-        margin-block: 49px;
-        border-color: var(--hr-transparent-color-white)
+        border-color: var(--hr-transparent-color-white);
+        width: 100%
     }
-    main #travel-details
+    main #planet-details :is(h1, p, hr)
     {
+        margin: 0
+    }
+    main #planet-details > #travel-details
+    {
+        width: 100%;
         display: flex;
         justify-content: space-evenly
     }
@@ -95,10 +89,21 @@
     }
     main #travel-details .question
     {
-        font-size: .9rem
+        font-size: 1.4rem;
+        letter-spacing: .24rem
     }
     main #travel-details .answer
     {
-        font-size: 1.75rem
+        font-size: 2.8rem
+    }
+    main :is(#planet-details, #travel-details) :is(h1, p, .answer)
+    {
+        letter-spacing: 0
+    }
+
+    #planet-details nav > *
+    {
+        font-size: 1.6rem;
+        letter-spacing: .27rem
     }
 }
