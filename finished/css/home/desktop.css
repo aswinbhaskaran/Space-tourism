@@ -12,7 +12,7 @@
     {
         position: relative;
         display: flex;
-        justify-content: center;
+        justify-content: center
     }
 
     main
@@ -20,45 +20,53 @@
         position: absolute;
         top: 15%;
         bottom: 15%;
-        width: clamp(1440px, 82%, 2260px);
+        width: clamp(1076px, 70%, 1774px);
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: flex-end
     }
-    main #intro-txt
+    main :is(#intro-txt, header)
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 24px
+    }
+    main > #intro-txt
     {
         width: 450px
     }
-    main #intro-txt *
-    {
-        margin: 0
-    }
-    main #intro-txt h5
-    {
-        font-size: 1.75rem;
-        letter-spacing: .37rem
-    }
-    main #intro-txt h1
-    {
-        font-size: 8.2rem;
-        margin-block: 24px
-    }
-    main header *
+    main header > *
     {
         font-weight: 400
     }
-    main #intro-txt p
+    main > #intro-txt h5
     {
-        font-size: 1.1rem;
-        letter-spacing: 0;
-        line-height: 2rem
+        font-size: 2.8rem;
+        letter-spacing: .47rem
     }
-    main a
+    main > #intro-txt h1
+    {
+        font-size: 15rem
+    }
+    main > #intro-txt > p
+    {
+        font-size: 1.8rem;
+        line-height: 3.2rem
+    }
+    main > #intro-txt :is(header > h1, p)
+    {
+        letter-spacing: 0
+    }
+    main > #intro-txt :is(header > *, p)
+    {
+        margin: 0
+    }
+    main > a
     {
         background-color: var(--color-white);
-        color: black;
-        font-size: 2rem;
-        letter-spacing: .13rem;
+        color: var(--color-black);
+        font-size: 3.2rem;
+        letter-spacing: .2rem;
         width: 274px;
         aspect-ratio: 1 / 1;
         border-radius: 50%;
@@ -66,8 +74,8 @@
         justify-content: center;
         align-items: center
     }
-    main a:hover
+    main > a:hover
     {
-        box-shadow: 0 0 0 90px #ffffff1a
+        box-shadow: 0px 0px 90px #ffffff1a
     }
 }
