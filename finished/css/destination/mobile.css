@@ -30,6 +30,7 @@
     main > #destination-header
     {
         display: flex;
+        justify-content: center;
         gap: 18px
     }
     main > #destination-header > span:first-of-type
