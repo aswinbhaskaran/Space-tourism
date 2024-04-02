@@ -30,11 +30,6 @@
         width: 327px;
         text-align: center
     }
-    main > #intro-txt h5
-    {
-        font-size: 1.6rem;
-        letter-spacing: .27rem
-    }
     main > #intro-txt h1
     {
         font-size: 8rem;

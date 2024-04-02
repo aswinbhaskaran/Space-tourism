@@ -47,7 +47,6 @@
     main > #intro-txt p
     {
         width: 444px;
-        font-size: 1.6rem;
         line-height: 2.8rem
     }
     main > #intro-txt :is(header > *, p)
