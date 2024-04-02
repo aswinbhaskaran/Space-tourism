@@ -39,7 +39,9 @@ for(let link of links)
 			{
 				const json = JSON.parse(res.response)
 
-				for(let dest of json)
+				console.info(json)
+
+				/*for(let dest of json)
 				{
 					if(element.innerText.toLowerCase() == dest.name.toLowerCase())
 					{
@@ -53,7 +55,7 @@ for(let link of links)
 						title.innerText = title.innerText.replace(title.innerText.split(/[-::]+/)[1], ` ${dest.name} `)
 
 					}
-				}
+				}*/
 			}
 		}
 	})
