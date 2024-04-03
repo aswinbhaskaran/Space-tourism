@@ -1,4 +1,4 @@
-@media screen and (min-width: 375px) and (max-width: 767px)
+@media screen and (375px <= width < 768px)
 {
     html
     {
@@ -25,99 +25,110 @@
     main
     {
         position: absolute;
-        inset: 12% 6% 0
-    }
-    main > #destination-header
-    {
-        display: flex;
-        gap: 18px
-    }
-    main > #destination-header > span:first-of-type
-    {
-        color: var(--hr-transparent-color-white);
-        font-weight: 700
-    }
-    main > #destination-section > img
-    {
-        width: 170px
-    }
-    main > #destination-section > #planet-details
-    {
-        width: 327px;
-        text-align: center
-    }
-    main #planet-details nav
-    {
-        height: 28px;
-        font-size: 1.4rem;
-        letter-spacing: .24rem;
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-        gap: 25px
-    }
-    main #planet-details .nav-active
-    {
-        border-right: none;
-        border-bottom: 3px solid
-    }
-    main #planet-details h1
-    {
-        font-weight: 400;
-        font-size: 5.6rem
-    }
-    main #planet-details > p
-    {
-        line-height: 2.5rem;
-        font-size: 1.5rem
-    }
-    main #planet-details > hr
-    {
-        width: 100%;
-        border-color: var(--hr-transparent-color-white)
-    }
-    main #planet-details :is(h1, p, hr)
-    {
-        margin: 0
-    }
-    main #travel-details > div
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px
-    }
-    main #travel-details .question
-    {
-        font-size: 1.4rem;
-        letter-spacing: .24rem
-    }
-    main #travel-details .answer
-    {
-        font-size: 2.8rem
-    }
-    main :is(#planet-details, #travel-details) :is(h1, p, .answer)
-    {
-        letter-spacing: 0
-    }
+        inset: 12% 6% 0;
 
-    @media screen and (min-height: 844px)
-    {
-        main #planet-details > #travel-details
+        #destination-header
         {
             display: flex;
-            flex-direction: column;
-            gap: 32px
+            gap: 18px;
+
+            & > span:first-of-type
+            {
+                color: var(--hr-transparent-color-white);
+                font-weight: 700
+            }
         }
-    }
 
-    @media screen and (max-height: 843px)
-    {
-        main #planet-details > #travel-details
+        #destination-section > img
         {
-            width: 100%;
+            width: 170px
+        }
+
+        #planet-details
+        {
+            width: 327px;
+            text-align: center;
+
+            & nav
+            {
+                height: 28px;
+                font-size: 1.4rem;
+                letter-spacing: .24rem;
+                display: flex;
+                justify-content: center;
+                align-items: stretch;
+                gap: 25px
+            }
+
+            .nav-active
+            {
+                border-right: none;
+                border-bottom: 3px solid
+            }
+
+            & h1
+            {
+                font-weight: 400;
+                font-size: 5.6rem
+            }
+
+            & > p
+            {
+                line-height: 2.5rem;
+                font-size: 1.5rem
+            }
+
+            & > hr
+            {
+                width: 100%;
+                border-color: var(--hr-transparent-color-white)
+            }
+
+            & :is(h1, p, hr)
+            {
+                margin: 0
+            }
+        }
+
+        #travel-details
+        {
             display: flex;
-            justify-content: space-between
+
+            @media screen and (height >= 844px)
+            {
+                flex-direction: column;
+                gap: 32px
+            }
+
+            @media screen and (height <= 843px)
+            {
+                width: 100%;
+                justify-content: space-between
+            }
+
+            & > div
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px
+            }
+
+            .question
+            {
+                font-size: 1.4rem;
+                letter-spacing: .24rem
+            }
+
+            .answer
+            {
+                font-size: 2.8rem
+            }
+        }
+
+        & :is(#planet-details, #travel-details) :is(h1, p, .answer)
+        {
+            letter-spacing: 0
         }
     }
 }
