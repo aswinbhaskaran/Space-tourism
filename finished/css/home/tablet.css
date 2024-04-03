@@ -1,4 +1,4 @@
-/*@media screen and (min-width: 768px) and (max-width: 1439px)
+@media screen and (768px >= width <=1439px)
 {
     html
     {
@@ -13,78 +13,80 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        align-items: center
-    }
+        align-items: center;
 
-    @media screen and (orientation: portrait)
-    {
-        main
+        @media screen and (orientation: portrait)
         {
             bottom: 0;
             left: 0;
             right: 0;
             height: 90%;
-            justify-content: space-evenly;
+            justify-content: space-evenly
         }
-    }
 
-    @media screen and (orientation: landscape)
-    {
-        main
+        @media screen and (orientation: landscape)
         {
             inset: 14vmin 0 -156px;
             justify-content: space-around
         }
-    }
 
-    main :is(#intro-txt, header)
-    {
-        display: flex;
-        flex-direction: column;
-        gap: 24px
+        & :is(#intro-txt, header)
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 24px
+        }
+
+        #intro-txt
+        {
+            width: 450px;
+            text-align: center;
+
+            & h5
+            {
+                font-size: 2rem;
+                letter-spacing: .34rem
+            }
+
+            & h1
+            {
+                font-size: 15rem
+            }
+
+            & > p
+            {
+                width: 444px;
+                line-height: 2.8rem
+            }
+
+            & :is(header > *, p)
+            {
+                margin: 0
+            }
+
+            & :is(header > h1, p)
+            {
+                letter-spacing: 0
+            }
+        }
+
+        & header > *
+        {
+            font-weight: 400
+        }
+
+        & > a
+        {
+            background-color: var(--color-white);
+            color: var(--color-black);
+            font-size: 3.2rem;
+            letter-spacing: .2rem;
+            width: 242px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
     }
-    main > #intro-txt
-    {
-        width: 450px;
-        text-align: center
-    }
-    main header > *
-    {
-        font-weight: 400
-    }
-    main > #intro-txt h5
-    {
-        font-size: 2rem;
-        letter-spacing: .34rem
-    }
-    main > #intro-txt h1
-    {
-        font-size: 15rem
-    }
-    main > #intro-txt p
-    {
-        width: 444px;
-        line-height: 2.8rem
-    }
-    main > #intro-txt :is(header > *, p)
-    {
-        margin: 0
-    }
-    main > #intro-txt :is(header > h1, p)
-    {
-        letter-spacing: 0
-    }
-    main > a
-    {
-        background-color: var(--color-white);
-        color: var(--color-black);
-        font-size: 3.2rem;
-        letter-spacing: .2rem;
-        width: 242px;
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center
-    }
-}*/
+}
