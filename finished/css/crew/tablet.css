@@ -10,7 +10,6 @@
 
     body
     {
-        position: relative;
         display: flex;
         justify-content: center
     }
@@ -20,48 +19,48 @@
         position: absolute;
         top: 11%;
         bottom: 0;
-        display: grid;
-        grid-template-areas: 'header' 'section' 'pagination' 'image';
-        justify-items: center;
-        align-content: space-between
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center
+    }
+    main :is(#crew-section, #crew-section > header)
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px
     }
     main > #crew-header
     {
-        font-size: 1.25rem;
-        letter-spacing: .21rem;
-        grid-area: header;
+        font-size: 2rem;
+        letter-spacing: .34rem;
         display: flex;
-        gap: 20px;
-        justify-self: start
+        gap: 16px;
+        align-self: flex-start
     }
-    main > #crew-header span:first-of-type
+    main > #crew-header > span:first-of-type
     {
         color: var(--hr-transparent-color-white);
         font-weight: 700
     }
     main > #crew-section
     {
-        width: 573px;
-        text-align: center;
-        grid-area: section;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px
+        width: 574px;
+        text-align: center
     }
-    main > #crew-section > header
+    main > #crew-section > p
     {
-        display: flex;
-        flex-direction: column;
-        gap: 16px
+        letter-spacing: 0;
+        line-height: 2.8rem;
+        width: 458px
     }
-    main > #crew-section > :is(header > *, p)
+    main > #crew-section :is(header > *, p)
     {
         margin: 0
     }
     main > #pagination-circles
     {
-        grid-area: pagination;
         display: flex;
         gap: 16px
     }
@@ -79,11 +78,7 @@
     }
     main > div:last-of-type
     {
-        justify-self: stretch;
-        align-self: stretch;
-        grid-area: image;
-        display: flex;
-        justify-content: center
+        display: flex
     }
     main > div:last-of-type > img
     {
@@ -92,12 +87,12 @@
 
     #crew-section > header > :first-child
     {
-        font-size: 2rem;
+        font-size: 2.4rem;
         color: var(--active-color)
     }
     #crew-section > header > :last-child
     {
-        font-size: 3.5rem
+        font-size: 4rem
     }
     #crew-section > header > *
     {
