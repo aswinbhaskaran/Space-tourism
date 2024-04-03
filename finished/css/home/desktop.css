@@ -1,6 +1,6 @@
 @media screen and (min-width: 1440px)
 {
-    html
+    /*html
     {
         background-image: url(../../assets/home/background-home-desktop.jpg);
         background-repeat: no-repeat;
@@ -76,5 +76,5 @@
     main > a:hover
     {
         box-shadow: 0 0 0 90px #ffffff1a
-    }
+    }*/
 }
