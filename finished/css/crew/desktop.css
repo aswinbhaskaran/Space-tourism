@@ -1,18 +1,19 @@
 @media screen and (min-width: 1440px)
 {
-    /*html
+    html
     {
-        background-image: url('../../assets/crew/background-crew-desktop.jpg');
+        background-image: url(../../assets/crew/background-crew-desktop.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover
     }
+
     body
     {
-        position: relative;
         display: flex;
         justify-content: center
     }
+
     main
     {
         position: absolute;
@@ -23,7 +24,7 @@
         grid-template-areas: 'header image' 'section image' 'pagination image';
         align-items: center
     }
-    main #crew-header
+    main > #crew-header
     {
         font-size: 2.8rem;
         letter-spacing: .47rem;
@@ -31,62 +32,42 @@
         display: flex;
         gap: 24px
     }
-    main #crew-header > :first-child
+    main > #crew-header > :first-child
     {
         font-weight: 700;
         color: var(--hr-transparent-color-white)
     }
-    main #crew-section
+    main > #crew-section
     {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
         grid-area: section
     }
-    main #crew-section > header
+    main :is(#crew-section, #crew-section > header)
     {
-        font-family: Bellefair, serif;
-        font-style: normal;
         display: flex;
         flex-direction: column;
-        gap: 15px
+        gap: 21px
     }
-    #crew-section > header > *
+    main > #crew-section > p
     {
-        font-weight: 400
+        width: 444px;
+        font-size: 1.8rem;
+        line-height: 3.2rem
     }
-    #crew-section > header > :first-child
-    {
-        font-size: 3.2rem;
-        color: var(--active-color)
-    }
-    #crew-section > header > :last-child
-    {
-        font-size: 5.6rem
-    }
-    :is(#crew-section > header > *, #crew-section > p)
-    {
-        margin: 0
-    }
-    #crew-section > :is(header, p)
+    main > #crew-section :is(header, p)
     {
         letter-spacing: 0
     }
-    main #crew-section > p
+    main > #crew-section :is(header > *, p)
     {
-        width: 444px;
-        font-family: Barlow, sans-serif;
-        font-style: normal;
-        font-style: 1.8rem;
-        line-height: 3.2rem
+        margin: 0
     }
-    main #pagination-circles
+    main > #pagination-circles
     {
         display: flex;
         gap: 24px;
         grid-area: pagination
     }
-    main #pagination-circles > span
+    main > #pagination-circles > span
     {
         display: inline-block;
         width: 15px;
@@ -96,11 +77,11 @@
         cursor: pointer;
         align-self: start
     }
-    main #pagination-circles > span:not(.page-active)
+    main > #pagination-circles > span:not(.page-active)
     {
         opacity: 17%
     }
-    main #pagination-circles > span:not(.page-active):hover
+    main > #pagination-circles > span:not(.page-active):hover
     {
         opacity: 50%
     }
@@ -116,5 +97,19 @@
     main > div:last-of-type > img
     {
         height: 80dvh
-    }*/
+    }
+
+    #crew-section > header > *
+    {
+        font-weight: 400
+    }
+    #crew-section > header > :first-child
+    {
+        font-size: 3.2rem;
+        color: var(--active-color)
+    }
+    #crew-section > header > :last-child
+    {
+        font-size: 5.6rem
+    }
 }
