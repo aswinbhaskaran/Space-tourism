@@ -1,6 +1,6 @@
 @media screen and (min-width: 375px) and (max-width: 767px)
 {
-	/*.nav-active
+	.nav-active
 	{
 		border-bottom: none;
 		border-right: 4px solid
@@ -10,86 +10,102 @@
 	{
 		width: 100%;
 		height: 72px;
-		position: relative
-	}
-	#header > nav
-	{
-		position: absolute;
-		bottom: 13px;
-		left: 0;
-		right: 0
-	}
-	#header > nav > #mob
-	{
-		display: flex;
-		justify-content: space-between;
-		align-items: center
-	}
-	#header #mob > .mob:first-child
-	{
-		width: 72px;
 		position: relative;
-		display: flex;
-		align-items: center
+
+		& > nav
+		{
+			position: absolute;
+			bottom: 13px;
+			left: 0;
+			right: 0
+		}
+
+		#mob
+		{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.mob
+			{
+				&:first-child
+				{
+					width: 72px;
+					position: relative;
+					display: flex;
+					align-items: center
+				}
+
+				&:last-child
+				{
+					width: 48px
+				}
+			}
+
+			& img[alt='Logo']
+			{
+				position: absolute;
+				right: 0
+			}
+
+			#mob-menu
+			{
+				width: 24px;
+				height: 21px
+			}
+		}
+
+		#menu-panel
+		{
+			width: 65%;
+			height: 100dvh;
+			position: absolute;
+			top: -35px;
+			right: 0;
+			z-index: 1;
+			background-color: var(--bg-transparent-color-white);
+			backdrop-filter: drop-shadow(2px 4px 6px var(--color-black)) blur(16px);
+
+			& :is(#img, #hr)
+			{
+				display: none
+			}
+
+			#menu-panel-close
+			{
+				width: 48px;
+				height: 57px;
+				position: relative;
+
+				& > img
+				{
+					width: 24px;
+					aspect-ratio: 1 / 1;
+					position: absolute;
+					bottom: 0
+				}
+			}
+		}
+
+		#menu
+		{
+			width: 85%;
+			height: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 50px;
+
+			& > a
+			{
+				display: flex;
+				gap: 11px
+			}
+
+			.menu-no
+			{
+				font-weight: 700
+			}
+		}
 	}
-	#header #mob img[alt='Logo']
-	{
-		position: absolute;
-		right: 0
-	}
-	#header #mob > .mob:last-child
-	{
-		width: 48px
-	}
-	#header #mob #mob-menu
-	{
-		width: 24px;
-		height: 21px
-	}
-	#header > nav > #menu-panel
-	{
-		width: 65%;
-		height: 100dvh;
-		position: absolute;
-		top: -35px;
-		right: 0;
-		z-index: 1;
-		background-color: var(--bg-transparent-color-white);
-		backdrop-filter: drop-shadow(2px 4px 6px var(--color-black)) blur(16px)
-	}
-	#header #menu-panel :is(#img, #hr)
-	{
-		display: none
-	}
-	#header #menu-panel > #menu-panel-close
-	{
-		width: 48px;
-		height: 57px;
-		position: relative
-	}
-	#header #menu-panel-close > img
-	{
-		width: 24px;
-		aspect-ratio: 1 / 1;
-		position: absolute;
-		bottom: 0
-	}
-	#header > nav #menu
-	{
-		width: 85%;
-		height: 50%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 50px
-	}
-	#header #menu > a
-	{
-		display: flex;
-		gap: 11px
-	}
-	#header #menu .menu-no
-	{
-		font-weight: 700
-	}*/
 }
