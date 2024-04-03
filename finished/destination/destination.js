@@ -34,7 +34,7 @@ for(let link of nav.children)
 
 			if((res.status == 200) && (res.readyState == 4))
 			{
-				const json = JSON.parse(res.response)
+				const json = JSON.parse(res.responseText)
 
 				for(let dest of json)
 				{
