@@ -26,12 +26,15 @@ for(let link of nav.children)
 					a.classList.replace('nav-active', 'text-color')
 		}
 
+		xmlHTTP.open('GET', './destination.json', true)
+		xmlHTTP.send()
+
 		xmlHTTP.onreadystatechange = r => {
 			let res = r.target
 
 			if((res.status == 200) && (res.readyState == 4))
 			{
-				const json = JSON.parse(res.response)
+				const json = JSON.parse(res.responseText)
 
 				for(let dest of json)
 				{
@@ -49,8 +52,5 @@ for(let link of nav.children)
 				}
 			}
 		}
-
-		xmlHTTP.open('GET', './destination.json', false)
-		xmlHTTP.send()
 	})
 }
