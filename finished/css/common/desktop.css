@@ -1,6 +1,6 @@
-@media screen and (min-width: 1440px)
+@media screen and (width <= 1440px)
 {
-	#header
+	/*#header
 	{
 		height: 96px;
 		position: absolute;
@@ -96,5 +96,5 @@
 				font-weight: 700
 			}
 		}
-	}
+	}*/
 }
