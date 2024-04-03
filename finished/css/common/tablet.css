@@ -1,6 +1,6 @@
 @media screen and (min-width: 768px) and (max-width: 1439px)
 {
-	#header
+	/*#header
 	{
 		position: absolute;
 		left: 0;
@@ -53,5 +53,5 @@
 	#header #menu > a:not(#header .nav-active)
 	{
 		border-bottom: 3px solid transparent
-	}
+	}*/
 }

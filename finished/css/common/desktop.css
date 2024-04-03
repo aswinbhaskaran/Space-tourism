@@ -1,6 +1,6 @@
 @media screen and (min-width: 1440px)
 {
-	/*#header
+	#header
 	{
 		height: 96px;
 		position: absolute;
@@ -8,81 +8,93 @@
 		right: 0;
 		top: 40px;
 		display: flex;
-		justify-content: center
+		justify-content: center;
+
+		& > nav
+		{
+			position: absolute;
+			bottom: 0;
+			top: 0;
+			width: clamp(1440px, 100%, 2260px);
+
+			& > #menu-panel
+			{
+				height: 100%;
+				display: flex;
+				align-items: center
+			}
+
+			& :is(#mob, #menu-panel-close)
+			{
+				display: none
+			}
+		}
+
+		#img
+		{
+			width: 103px;
+			align-self: stretch;
+			position: relative;
+			display: flex;
+			align-items: center;
+
+			& > img
+			{
+				position: absolute;
+				right: 0
+			}
+		}
+
+		#hr
+		{
+			width: 473px;
+			position: relative;
+			left: 64px;
+			z-index: 1;
+			display: flex;
+			align-self: stretch;
+			align-items: center;
+
+			& > hr
+			{
+				position: absolute;
+				left: 0;
+				right: 30px;
+				border-color: var(--hr-transparent-color-white)
+			}
+		}
+
+		#menu
+		{
+			background-color: var(--bg-transparent-color-white);
+			backdrop-filter: drop-shadow(2px 4px 6px var(--color-black)) blur(16px);
+			flex: 1 850px;
+			align-self: stretch;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: stretch;
+			
+			& > a
+			{
+				display: flex;
+				align-items: center;
+				gap: 11px;
+				
+				&:not(.nav-active)
+				{
+					border-bottom: 3px solid transparent
+				}
+
+				&:not(.nav-active):hover
+				{
+					border-bottom: 3px solid var(--active-color)
+				}
+			}
+
+			.menu-no
+			{
+				font-weight: 700
+			}
+		}
 	}
-	#header > nav
-	{
-		position: absolute;
-		bottom: 0;
-		top: 0;
-		width: clamp(1440px, 100%, 2260px)
-	}
-	#header > nav > #menu-panel
-	{
-		height: 100%;
-		display: flex;
-		align-items: center
-	}
-	#header > nav :is(#mob, #menu-panel-close)
-	{
-		display: none
-	}
-	#header > nav #img
-	{
-		width: 103px;
-		align-self: stretch;
-		position: relative;
-		display: flex;
-		align-items: center
-	}
-	#header #img img
-	{
-		position: absolute;
-		right: 0
-	}
-	#header > nav #hr
-	{
-		width: 473px;
-		position: relative;
-		left: 64px;
-		z-index: 1;
-		display: flex;
-		align-self: stretch;
-		align-items: center
-	}
-	#header #hr hr
-	{
-		position: absolute;
-		left: 0;
-		right: 30px;
-		border-color: var(--hr-transparent-color-white)
-	}
-	#header > nav #menu
-	{
-		background-color: var(--bg-transparent-color-white);
-		backdrop-filter: drop-shadow(2px 4px 6px var(--color-black)) blur(16px);
-		flex: 1 850px;
-		align-self: stretch;
-		display: flex;
-		justify-content: space-evenly;
-		align-items: stretch
-	}
-	#header #menu > a
-	{
-		display: flex;
-		align-items: center;
-		gap: 11px
-	}
-	#header #menu > a:not(#header .nav-active)
-	{
-		border-bottom: 3px solid transparent
-	}
-	#header #menu > a:not(#header .nav-active):hover
-	{
-		border-bottom: 3px solid var(--active-color)
-	}
-	#header #menu .menu-no
-	{
-		font-weight: 700
-	}*/
 }

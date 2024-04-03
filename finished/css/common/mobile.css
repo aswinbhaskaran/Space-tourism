@@ -1,6 +1,6 @@
 @media screen and (min-width: 375px) and (max-width: 767px)
 {
-	.nav-active
+	/*.nav-active
 	{
 		border-bottom: none;
 		border-right: 4px solid
@@ -91,5 +91,5 @@
 	#header #menu .menu-no
 	{
 		font-weight: 700
-	}
+	}*/
 }
