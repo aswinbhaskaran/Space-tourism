@@ -1,6 +1,6 @@
 @media screen and (min-width: 1440px)
 {
-    /*html
+    html
     {
         background-image: url(../../assets/home/background-home-desktop.jpg);
         background-repeat: no-repeat;
@@ -22,59 +22,69 @@
         width: clamp(1076px, 70%, 1774px);
         display: flex;
         justify-content: space-between;
-        align-items: flex-end
+        align-items: flex-end;
+
+        & :is(#intro-txt, header)
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 24px
+        }
+
+        & > #intro-txt
+        {
+            width: 450px;
+
+            & h5
+            {
+                font-size: 2.8rem;
+                letter-spacing: .47rem
+            }
+
+            & h1
+            {
+                font-size: 15rem
+            }
+
+            & > p
+            {
+                font-size: 1.8rem;
+                line-height: 3.2rem
+            }
+
+            & :is(header > h1, p)
+            {
+                letter-spacing: 0
+            }
+
+            & :is(header > *, p)
+            {
+                margin: 0
+            }
+        }
+
+        & header > *
+        {
+            font-weight: 400
+        }
+
+        & > a
+        {
+            background-color: var(--color-white);
+            color: var(--color-black);
+            font-size: 3.2rem;
+            letter-spacing: .2rem;
+            width: 274px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover
+            {
+                box-shadow: 0 0 0 90px #ffffff1a
+            }
+        }
     }
-    main :is(#intro-txt, header)
-    {
-        display: flex;
-        flex-direction: column;
-        gap: 24px
-    }
-    main > #intro-txt
-    {
-        width: 450px
-    }
-    main header > *
-    {
-        font-weight: 400
-    }
-    main > #intro-txt h5
-    {
-        font-size: 2.8rem;
-        letter-spacing: .47rem
-    }
-    main > #intro-txt h1
-    {
-        font-size: 15rem
-    }
-    main > #intro-txt > p
-    {
-        font-size: 1.8rem;
-        line-height: 3.2rem
-    }
-    main > #intro-txt :is(header > h1, p)
-    {
-        letter-spacing: 0
-    }
-    main > #intro-txt :is(header > *, p)
-    {
-        margin: 0
-    }
-    main > a
-    {
-        background-color: var(--color-white);
-        color: var(--color-black);
-        font-size: 3.2rem;
-        letter-spacing: .2rem;
-        width: 274px;
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center
-    }
-    main > a:hover
-    {
-        box-shadow: 0 0 0 90px #ffffff1a
-    }*/
 }
