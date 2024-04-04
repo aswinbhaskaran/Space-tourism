@@ -1,4 +1,4 @@
-@media screen and (min-width: 1440px)
+@media screen and (width >= 1440px)
 {
     html
     {
@@ -22,93 +22,111 @@
         width: clamp(1236px, 80%, 2039px);
         display: grid;
         grid-template-areas: 'header image' 'section image' 'pagination image';
-        align-items: center
-    }
-    main > #crew-header
-    {
-        font-size: 2.8rem;
-        letter-spacing: .47rem;
-        grid-area: header;
-        display: flex;
-        gap: 24px
-    }
-    main > #crew-header > :first-child
-    {
-        font-weight: 700;
-        color: var(--hr-transparent-color-white)
-    }
-    main > #crew-section
-    {
-        grid-area: section
-    }
-    main :is(#crew-section, #crew-section > header)
-    {
-        display: flex;
-        flex-direction: column;
-        gap: 21px
-    }
-    main > #crew-section > p
-    {
-        width: 444px;
-        font-size: 1.8rem;
-        line-height: 3.2rem
-    }
-    main > #crew-section :is(header, p)
-    {
-        letter-spacing: 0
-    }
-    main > #crew-section :is(header > *, p)
-    {
-        margin: 0
-    }
-    main > #pagination-circles
-    {
-        display: flex;
-        gap: 24px;
-        grid-area: pagination
-    }
-    main > #pagination-circles > span
-    {
-        display: inline-block;
-        width: 15px;
-        aspect-ratio: 1 / 1;
-        background-color: var(--color-white);
-        border-radius: 50%;
-        cursor: pointer
-    }
-    main > #pagination-circles > span:not(.page-active)
-    {
-        opacity: 17%
-    }
-    main > #pagination-circles > span:not(.page-active):hover
-    {
-        opacity: 50%
-    }
-    main > div:last-of-type
-    {
-        grid-area: image;
-        justify-self: stretch;
-        align-self: stretch;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end
-    }
-    main > div:last-of-type > img
-    {
-        height: 80dvh
-    }
+        align-items: center;
 
-    #crew-section > header > *
-    {
-        font-weight: 400
-    }
-    #crew-section > header > :first-child
-    {
-        font-size: 3.2rem;
-        color: var(--active-color)
-    }
-    #crew-section > header > :last-child
-    {
-        font-size: 5.6rem
+        & :is(#crew-section, #crew-section > header)
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 21px
+        }
+
+        #crew-header
+        {
+            font-size: 2.8rem;
+            letter-spacing: .47rem;
+            grid-area: header;
+            display: flex;
+            gap: 24px;
+
+            & > :first-child
+            {
+                font-weight: 700;
+                color: var(--hr-transparent-color-white)
+            }
+        }
+
+        #crew-section
+        {
+            grid-area: section;
+
+            & > header
+            {
+                & > *
+                {
+                    font-weight: 400
+                }
+
+                & > :first-child
+                {
+                    font-size: 3.2rem;
+                    color: var(--active-color)
+                }
+
+                & > :last-child
+                {
+                    font-size: 5.6rem
+                }
+            }
+
+            & > p
+            {
+                width: 444px;
+                font-size: 1.8rem;
+                line-height: 3.2rem
+            }
+
+            & :is(header, p)
+            {
+                letter-spacing: 0
+            }
+
+            & :is(header > *, p)
+            {
+                margin: 0
+            }
+        }
+
+        #pagination-circles
+        {
+            display: flex;
+            gap: 24px;
+            grid-area: pagination;
+
+            & > span
+            {
+                display: inline-block;
+                width: 15px;
+                aspect-ratio: 1 / 1;
+                background-color: var(--color-white);
+                border-radius: 50%;
+                cursor: pointer;
+
+                &:not(.page-active)
+                {
+                    opacity: 17%;
+
+                    &:hover
+                    {
+                        opacity: 50%
+                    }
+                }
+            }
+        }
+
+        & > div:last-of-type
+        {
+            grid-area: image;
+            justify-self: stretch;
+            align-self: stretch;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            & > img
+            {
+                height: 80dvh
+            }
+        }
     }
 }

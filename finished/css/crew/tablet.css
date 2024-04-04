@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px) and (max-width: 1439px)
+@media screen and (768px <= width < 1440px)
 {
     html
     {
@@ -22,81 +22,97 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center
-    }
-    main :is(#crew-section, #crew-section > header)
-    {
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 12px
-    }
-    main > #crew-header
-    {
-        font-size: 2rem;
-        letter-spacing: .34rem;
-        display: flex;
-        gap: 16px;
-        align-self: flex-start
-    }
-    main > #crew-header > span:first-of-type
-    {
-        color: var(--hr-transparent-color-white);
-        font-weight: 700
-    }
-    main > #crew-section
-    {
-        width: 574px;
-        text-align: center
-    }
-    main > #crew-section > p
-    {
-        letter-spacing: 0;
-        line-height: 2.8rem;
-        width: 458px
-    }
-    main > #crew-section :is(header > *, p)
-    {
-        margin: 0
-    }
-    main > #pagination-circles
-    {
-        display: flex;
-        gap: 16px
-    }
-    main > #pagination-circles > span
-    {
-        display: inline-block;
-        width: 10px;
-        aspect-ratio: 1 / 1;
-        background-color: var(--color-white);
-        border-radius: 50%
-    }
-    main > #pagination-circles > span:not(.page-active)
-    {
-        opacity: 17%
-    }
-    main > div:last-of-type
-    {
-        display: flex
-    }
-    main > div:last-of-type > img
-    {
-        height: 45dvh
-    }
 
-    #crew-section > header > :first-child
-    {
-        font-size: 2.4rem;
-        color: var(--active-color)
-    }
-    #crew-section > header > :last-child
-    {
-        font-size: 4rem
-    }
-    #crew-section > header > *
-    {
-        font-weight: 400;
-        letter-spacing: 0
+        & :is(#crew-section, #crew-section > header)
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px
+        }
+
+        #crew-header
+        {
+            font-size: 2rem;
+            letter-spacing: .34rem;
+            display: flex;
+            gap: 16px;
+            align-self: flex-start;
+
+            & > span:first-of-type
+            {
+                color: var(--hr-transparent-color-white);
+                font-weight: 700
+            }
+        }
+
+        #crew-section
+        {
+            width: 574px;
+            text-align: center;
+
+            & > p
+            {
+                letter-spacing: 0;
+                line-height: 2.8rem;
+                width: 458px
+            }
+
+            & :is(header > *, p)
+            {
+                margin: 0
+            }
+
+            & > header
+            {
+                & > *
+                {
+                    font-weight: 400;
+                    letter-spacing: 0
+                }
+
+                & > :first-child
+                {
+                    font-size: 2.4rem;
+                    color: var(--active-color)
+                }
+
+                & > :last-child
+                {
+                    font-size: 4rem
+                }
+            }
+        }
+
+        #pagination-circles
+        {
+            display: flex;
+            gap: 16px;
+
+            & > span
+            {
+                display: inline-block;
+                width: 10px;
+                aspect-ratio: 1 / 1;
+                background-color: var(--color-white);
+                border-radius: 50%;
+
+                &:not(.page-active)
+                {
+                    opacity: 17%
+                }
+            }
+        }
+
+        & > div:last-of-type
+        {
+            display: flex;
+
+            & > img
+            {
+                height: 45dvh
+            }
+        }
     }
 }
