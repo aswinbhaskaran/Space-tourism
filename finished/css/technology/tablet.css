@@ -7,4 +7,140 @@
         background-repeat: no-repeat;
         background-size: cover
     }
+
+    main
+    {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        @media screen and (orientation: portrait)
+        {
+            top: 10%
+        }
+
+        @media screen and (orientation: landscape)
+        {
+            top: 14%
+        }
+
+        & > div
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            counter-reset: page;
+
+            @media screen and (orientation: landscape)
+            {
+                position: absolute;
+                top: 21px;
+                left: 0;
+                right: 0;
+                gap: 45px
+            }
+
+            @media screen and (orientation: portrait)
+            {
+                gap: 60px
+            }
+
+            & > header
+            {
+                font-size: 2rem;
+                letter-spacing: .34rem;
+                translate: 38.5px;
+                order: 1;
+                display: flex;
+                align-self: flex-start;
+                gap: 16px;
+
+                & > :first-child
+                {
+                    font-weight: 700;
+                    color: var(--hr-transparent-color-white)
+                }
+            }
+
+            #pagination
+            {
+                order: 3;
+                display: flex;
+                gap: 16px;
+
+                & > span
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 60px;
+                    aspect-ratio: 1 / 1;
+                    border-radius: 50%;
+                    counter-increment: page;
+                    font-size: 2.4rem;
+                    letter-spacing: .15rem;
+
+                    &::after
+                    {
+                        content: counter(page)
+                    }
+                }
+            }
+
+            #technology-section
+            {
+                width: 458px;
+                text-align: center;
+                order: 4;
+
+                & > header
+                {
+                    & > :first-child
+                    {
+                        font-size: 1.6rem
+                    }
+
+                    & > :last-child
+                    {
+                        font-size: 4rem
+                    }
+                }
+
+                & :is(header > *, p)
+                {
+                    margin: 0
+                }
+
+                & :is(header > h1, p)
+                {
+                    letter-spacing: 0
+                }
+
+                & > p
+                {
+                    font-size: 1.6rem;
+                    line-height: 2.8rem
+                }
+            }
+
+            & :is(#technology-section, #technology-section > header)
+            {
+                display: flex;
+                flex-direction: column;
+                gap: 16px
+            }
+
+            & > picture
+            {
+                align-self: stretch;
+                order: 2;
+
+                & > img
+                {
+                    width: 100%
+                }
+            }
+        }
+    }
 }
