@@ -10,6 +10,118 @@
 
     main
     {
-        height: 100%
+        counter-reset: page;
+        position: absolute;
+        top: 13%;
+
+        & > div
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 31px;
+
+            & > header
+            {
+                order: 1;
+                display: flex;
+                gap: 16px
+            }
+
+            & #head-no
+            {
+                color: var(--hr-transparent-color-white);
+                font-weight: 700
+            }
+        }
+
+        #pagination
+        {
+            order: 3;
+            display: flex;
+            gap: 16px;
+
+            & > span
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                letter-spacing: .1rem;
+                width: 40px;
+                aspect-ratio: 1 / 1;
+                border-radius: 50%;
+                counter-increment: page;
+
+                &::after
+                {
+                    content: counter(page)
+                }
+
+                &:not(.choice-active)
+                {
+                    border: 1px solid var(--hr-transparent-color-white);
+                    color: var(--color-white)
+                }
+            }
+        }
+
+        #technology-section
+        {
+            text-align: center;
+            order: 4;
+            width: 327px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            & > header
+            {
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+
+                & > *
+                {
+                    font-weight: 400
+                }
+            }
+
+            & h6
+            {
+                font-size: 1.4rem;
+                letter-spacing: .24rem
+            }
+
+            & h1
+            {
+                font-size: 2.4rem
+            }
+
+            & :is(header > *, p)
+            {
+                margin: 0
+            }
+
+            & :is(header > h1, p)
+            {
+                letter-spacing: 0
+            }
+
+            & > p
+            {
+                font-size: 1.5rem;
+                line-height: 2.5rem
+            }
+        }
+
+        & picture
+        {
+            order: 2;
+
+            & > img
+            {
+                width: 100dvw
+            }
+        }
     }
 }

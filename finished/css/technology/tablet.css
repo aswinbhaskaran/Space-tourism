@@ -54,97 +54,103 @@
                 order: 1;
                 display: flex;
                 align-self: flex-start;
-                gap: 16px;
-
-                & > :first-child
-                {
-                    font-weight: 700;
-                    color: var(--hr-transparent-color-white)
-                }
-            }
-
-            #pagination
-            {
-                order: 3;
-                display: flex;
-                gap: 16px;
-
-                & > span
-                {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 60px;
-                    aspect-ratio: 1 / 1;
-                    border-radius: 50%;
-                    counter-increment: page;
-                    font-size: 2.4rem;
-                    letter-spacing: .15rem;
-
-                    &::after
-                    {
-                        content: counter(page)
-                    }
-                }
-            }
-
-            #technology-section
-            {
-                width: 458px;
-                text-align: center;
-                order: 4;
-
-                & > header
-                {
-                    & > *
-                    {
-                        font-weight: 400
-                    }
-
-                    & > :first-child
-                    {
-                        font-size: 1.6rem
-                    }
-
-                    & > :last-child
-                    {
-                        font-size: 4rem
-                    }
-                }
-
-                & :is(header > *, p)
-                {
-                    margin: 0
-                }
-
-                & :is(header > h1, p)
-                {
-                    letter-spacing: 0
-                }
-
-                & > p
-                {
-                    font-size: 1.6rem;
-                    line-height: 2.8rem
-                }
-            }
-
-            & :is(#technology-section, #technology-section > header)
-            {
-                display: flex;
-                flex-direction: column;
                 gap: 16px
             }
 
-            & > picture
+            & #head-no
             {
-                align-self: stretch;
-                order: 2;
+                font-weight: 700;
+                color: var(--hr-transparent-color-white)
+            }
+        }
 
-                & > img
+        #pagination
+        {
+            order: 3;
+            display: flex;
+            gap: 16px;
+
+            & > span
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                aspect-ratio: 1 / 1;
+                border-radius: 50%;
+                counter-increment: page;
+                font-size: 2.4rem;
+                letter-spacing: .15rem;
+
+                &::after
                 {
-                    width: 100%
+                    content: counter(page)
                 }
+
+                &:not(.choice-active)
+                {
+                    border: 1px solid var(--hr-transparent-color-white);
+                    color: var(--color-white)
+                }
+            }
+        }
+
+        #technology-section
+        {
+            width: 458px;
+            text-align: center;
+            order: 4;
+
+            & > header
+            {
+                & > *
+                {
+                    font-weight: 400
+                }
+            }
+
+            & h6
+            {
+                font-size: 1.6rem
+            }
+
+            & h1
+            {
+                font-size: 4rem
+            }
+
+            & :is(header > *, p)
+            {
+                margin: 0
+            }
+
+            & :is(header > h1, p)
+            {
+                letter-spacing: 0
+            }
+
+            & > p
+            {
+                font-size: 1.6rem;
+                line-height: 2.8rem
+            }
+        }
+
+        & :is(#technology-section, #technology-section > header)
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 16px
+        }
+
+        & picture
+        {
+            align-self: stretch;
+            order: 2;
+
+            & > img
+            {
+                width: 100%
             }
         }
     }
