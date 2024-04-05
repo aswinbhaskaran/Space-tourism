@@ -96,6 +96,11 @@
 
                 & > header
                 {
+                    & > *
+                    {
+                        font-weight: 400
+                    }
+
                     & > :first-child
                     {
                         font-size: 1.6rem
