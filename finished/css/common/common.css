@@ -8,6 +8,12 @@
     opacity: 100%
 }
 
+.choice-active
+{
+    background-color: var(--color-white);
+    color: var(--color-black)
+}
+
 .upper
 {
     text-transform: uppercase

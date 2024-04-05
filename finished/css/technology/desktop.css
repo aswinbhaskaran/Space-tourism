@@ -8,21 +8,125 @@
         background-size: cover
     }
 
+    body
+    {
+        display: flex;
+        justify-content: center
+    }
+
     main
     {
+        width: clamp(1440px, 100%, 2260px);
         position: absolute;
-        inset: 13% 0 0;
-        counter-reset: pagination;
+        top: 17%;
+        bottom: 16%;
 
-        #pagination > span
+        & > div
         {
-            counter-increment: pagination;
-            background-color: var(--color-white);
-            color: var(--color-black);
+            position: absolute;
+            inset: 0 0 0 13%;
+            counter-reset: pagination;
+            display: grid;
+            grid-template-areas: 'header header image' 'pagination section image';
+            align-items: center;
 
-            &::after
+            & > header
             {
-                content: counter(pagination)
+                grid-area: header;
+                font-size: 2.8rem;
+                letter-spacing: .47rem;
+                align-self: start;
+                display: flex;
+                gap: 24px;
+
+                & > :first-child
+                {
+                    color: var(--hr-transparent-color-white);
+                    font-weight: 700
+                }
+            }
+
+            & > picture
+            {
+                grid-area: image;
+                align-self: end;
+                justify-self: end
+            }
+        }
+
+        #pagination
+        {
+            grid-area: pagination;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            & > span
+            {
+                counter-increment: pagination;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80px;
+                aspect-ratio: 1 / 1;
+                border: 1px solid var(--hr-transparent-color-white);
+                border-radius: 50%;
+                font-size: 3.2rem;
+                letter-spacing: .2rem;
+                cursor: pointer;
+
+                &::after
+                {
+                    content: counter(pagination)
+                }
+            }
+        }
+
+        #technology-section
+        {
+            grid-area: section;
+            justify-self: center;
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+
+            & > header
+            {
+                display: flex;
+                flex-direction: column;
+                gap: 11px;
+
+                & > *
+                {
+                    font-weight: 400
+                }
+
+                & > :first-child
+                {
+                    font-size: 1.6rem
+                }
+
+                & > :last-child
+                {
+                    font-size: 5.6rem
+                }
+            }
+
+            & :is(header > *, p)
+            {
+                margin: 0
+            }
+
+            & :is(header > h1, p)
+            {
+                letter-spacing: 0
+            }
+
+            & > p
+            {
+                width: 444px;
+                font-size: 1.8rem;
+                line-height: 3.2rem
             }
         }
     }
