@@ -61,7 +61,17 @@
 				height: 34px;
 				display: flex;
 				gap: 36px;
-				align-items: stretch
+				align-items: stretch;
+
+				& > *
+				{
+					cursor: pointer;
+
+					&:not(.nav-active):hover
+					{
+						border-bottom: 3px solid var(--active-color)
+					}
+				}
 			}
 
 			& h1
@@ -85,16 +95,6 @@
 			& :is(h1, p, hr)
 			{
 				margin: 0
-			}
-
-			& nav *
-			{
-				cursor: pointer;
-
-				&:not(.nav-active):hover
-				{
-					border-bottom: 3px solid var(--active-color)
-				}
 			}
 		}
 

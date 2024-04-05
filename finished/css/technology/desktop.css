@@ -69,7 +69,6 @@
                 align-items: center;
                 width: 80px;
                 aspect-ratio: 1 / 1;
-                border: 1px solid var(--hr-transparent-color-white);
                 border-radius: 50%;
                 font-size: 3.2rem;
                 letter-spacing: .2rem;
@@ -78,6 +77,16 @@
                 &::after
                 {
                     content: counter(pagination)
+                }
+
+                &:not(.choice-active)
+                {
+                    border: 1px solid var(--hr-transparent-color-white)
+                }
+
+                &:not(.choice-active):hover
+                {
+                    border-color: var(--color-white)
                 }
             }
         }
