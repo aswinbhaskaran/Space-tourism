@@ -1,0 +1,15 @@
+@media screen and (365px <= width < 768px)
+{
+    html
+    {
+        background-image: url(../../assets/technology/background-technology-mobile.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover
+    }
+
+    main
+    {
+        height: 100%
+    }
+}

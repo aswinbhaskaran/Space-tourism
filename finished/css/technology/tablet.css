@@ -1,0 +1,10 @@
+@media screen and (768px <= width < 1440px)
+{
+    html
+    {
+        background-image: url(../../assets/technology/background-technology-tablet.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover
+    }
+}

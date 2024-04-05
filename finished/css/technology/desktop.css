@@ -1,0 +1,29 @@
+@media screen and (width >= 1440px)
+{
+    html
+    {
+        background-image: url(../../assets/technology/background-technology-desktop.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover
+    }
+
+    main
+    {
+        position: absolute;
+        inset: 13% 0 0;
+        counter-reset: pagination;
+
+        #pagination > span
+        {
+            counter-increment: pagination;
+            background-color: var(--color-white);
+            color: var(--color-black);
+
+            &::after
+            {
+                content: counter(pagination)
+            }
+        }
+    }
+}
