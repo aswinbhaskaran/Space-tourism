@@ -73,4 +73,24 @@
             align-items: center
         }
     }
+
+    footer
+    {
+        position: absolute;
+        bottom: 0;
+        font-size: 1.2rem;
+        text-align: center;
+        color: var(--color-not-white-nor-black);
+
+        & > hr
+        {
+            border-color: var(--color-not-white-nor-black)
+        }
+
+        & a
+        {
+            border-bottom: 1px solid;
+            padding-bottom: 2px
+        }
+    }
 }

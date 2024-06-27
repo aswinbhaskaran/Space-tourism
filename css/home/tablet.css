@@ -89,4 +89,31 @@
             align-items: center
         }
     }
+
+    footer
+    {
+        position: absolute;
+        color: var(--color-not-white-nor-black);
+
+        @media screen and (orientation: portrait)
+        {
+            bottom: 0
+        }
+
+        @media screen and (orientation: landscape)
+        {
+            bottom: -25vmax
+        }
+
+        & > hr
+        {
+            border-color: var(--color-not-white-nor-black)
+        }
+
+        & a
+        {
+            border-bottom: 1px solid;
+            padding-bottom: 2px
+        }
+    }
 }
