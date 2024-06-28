@@ -134,4 +134,11 @@
 			letter-spacing: 0
 		}
 	}
+
+	footer
+	{
+		position: fixed;
+		bottom: 0;
+		font-size: 2rem
+	}
 }

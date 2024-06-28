@@ -89,7 +89,6 @@
         position: absolute;
         font-size: 1.2rem;
         text-align: center;
-        color: var(--color-not-white-nor-black);
         
         @media screen and (orientation: portrait)
         {
@@ -99,17 +98,6 @@
         @media screen and (orientation: landscape)
         {
             bottom: -40vmax
-        }
-
-        & > hr
-        {
-            border-color: var(--color-not-white-nor-black)
-        }
-
-        & a
-        {
-            border-bottom: 1px solid;
-            padding-bottom: 2px
         }
     }
 }
