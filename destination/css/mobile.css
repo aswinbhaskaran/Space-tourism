@@ -5,7 +5,12 @@
         background-image: url(../../images/destination/background-destination-mobile.jpg);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover
+        background-size: cover;
+
+        @media screen and (orientation: portrait)
+        {
+            height: 130dvh
+        }
     }
 
     body
@@ -25,7 +30,17 @@
     main
     {
         position: absolute;
-        inset: 12% 6% 0;
+        
+        @media screen and (orientation: portrait)
+        {
+            bottom: 0;
+            height: 85%
+        }
+
+        @media screen and (orientation: landscape)
+        {
+            bottom: -60vmax
+        }
 
         #destination-header
         {
@@ -129,6 +144,24 @@
         & :is(#planet-details, #travel-details) :is(h1, p, .answer)
         {
             letter-spacing: 0
+        }
+    }
+
+    footer
+    {
+        position: absolute;
+        font-size: 1.2rem;
+        text-align: center;
+        
+        @media screen and (orientation: portrait)
+        {
+            bottom: -30vmax;
+            line-height: 2rem
+        }
+
+        @media screen and (orientation: landscape)
+        {
+            bottom: -70vmax
         }
     }
 }

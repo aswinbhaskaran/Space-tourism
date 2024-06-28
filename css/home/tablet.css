@@ -93,6 +93,7 @@
     footer
     {
         position: absolute;
+        font-size: 1.7rem;
 
         @media screen and (orientation: portrait)
         {

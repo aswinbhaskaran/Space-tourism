@@ -5,7 +5,17 @@
         background-image: url(../../images/destination/background-destination-tablet.jpg);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover
+        background-size: cover;
+        
+        @media screen and (orientation: portrait)
+        {
+            height: 110dvh
+        }
+
+        @media screen and (orientation: landscape)
+        {
+            height: 103dvh
+        }
     }
 
     :is(main, main > #destination-section, main > #destination-section > #planet-details, main #planet-details > header)
@@ -115,6 +125,22 @@
         & :is(#planet-details, #travel-details) :is(h1, p, .answer)
         {
             letter-spacing: 0
+        }
+    }
+
+    footer
+    {
+        position: absolute;
+        font-size: 1.7rem;
+        
+        @media screen and (orientation: portrait)
+        {
+            bottom: -10vmax
+        }
+
+        @media screen and (orientation: landscape)
+        {
+            bottom: -30vmax
         }
     }
 }
