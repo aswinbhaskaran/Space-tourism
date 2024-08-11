@@ -90,6 +90,11 @@
         font-size: 1.2rem;
         text-align: center;
         
+        & > noscript::before
+        {
+            content: 'JavaScript must be enabled to open and close menu'
+        }
+        
         @media screen and (orientation: portrait)
         {
             bottom: 0
