@@ -135,12 +135,27 @@
         
         @media screen and (orientation: portrait)
         {
-            bottom: -10vmax
+            bottom: 3%;
+            
+            @media screen and (height <= 1041px)
+            {
+                bottom: -10vmax
+            }
+            
+            @media screen and (1042px < height <= 1100px)
+            {
+                bottom: -3vmax;
+            }
         }
 
         @media screen and (orientation: landscape)
         {
-            bottom: -30vmax
+            bottom: -10vmax;
+            
+            @media screen and (height <= 678px)
+            {
+                bottom: -30vmax
+            }
         }
     }
 }
