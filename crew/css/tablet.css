@@ -89,6 +89,7 @@
         {
             display: flex;
             gap: 16px;
+            align-items: center;
 
             & > span
             {
@@ -101,6 +102,17 @@
                 &:not(.page-active)
                 {
                     opacity: 17%
+                }
+            }
+
+            & > noscript
+            {
+                display: block;
+                color: var(--color-white);
+
+                &::before
+                {
+                    content: 'JavaScript must be enabled to switch contents'
                 }
             }
         }

@@ -89,6 +89,16 @@
                     border-color: var(--color-white)
                 }
             }
+
+            & + noscript
+            {
+                color: var(--color-white);
+
+                &::before
+                {
+                    content: 'JavaScript must be enabled to switch contents'
+                }
+            }
         }
 
         #technology-section

@@ -1,13 +1,11 @@
 const title = document.querySelector('head > title')
-const main = document.querySelector('main')
-const section = main.querySelector('#crew-section')
-const header = section.querySelector('header')
-const p = section.querySelector('p')
 const pages = main.querySelector('#pagination-circles')
 const img = main.querySelector('img')
-
-const firstChild = header.children[0]
-const lastChild = header.children[header.children.length - 1]
+const section = main.querySelector('#crew-section')
+const p = section.querySelector('p')
+const sheader = section.querySelector('header')
+const firstChild = sheader.children[0]
+const lastChild = sheader.children[sheader.children.length - 1]
 
 for(let page of pages.children)
 {

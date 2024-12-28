@@ -80,6 +80,16 @@
 				}
 			}
 
+			& noscript
+			{
+				color: var(--color-white);
+
+				&::before
+				{
+					content: 'Javascript must be enabled to switch contents'
+				}
+			}
+
 			& h1
 			{
 				font-weight: 400;

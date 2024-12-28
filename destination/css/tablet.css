@@ -67,6 +67,16 @@
                 gap: 36px
             }
 
+            & noscript
+            {
+                color: var(--color-white);
+
+                &::before
+                {
+                    content: 'JavaScript must be enabled to switch contents'
+                }
+            }
+
             & h1
             {
                 font-weight: 400;

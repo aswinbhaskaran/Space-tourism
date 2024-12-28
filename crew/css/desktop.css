@@ -91,6 +91,7 @@
         {
             display: flex;
             gap: 24px;
+            align-items: center;
             grid-area: pagination;
 
             & > span
@@ -110,6 +111,16 @@
                     {
                         opacity: 50%
                     }
+                }
+            }
+
+            & > noscript
+            {
+                color: var(--color-white);
+
+                &::before
+                {
+                    content: 'JavaScript must be enabled to switch contents'
                 }
             }
         }
