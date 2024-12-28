@@ -152,6 +152,21 @@
         position: absolute;
         font-size: 1.2rem;
         text-align: center;
+
+        & > noscript
+        {
+            position: inherit;
+            bottom: 5px;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            color: var(--color-white);
+
+            &::before
+            {
+                content: 'JavaScript must be enabled to open and close menu'
+            }
+        }
         
         @media screen and (orientation: portrait)
         {

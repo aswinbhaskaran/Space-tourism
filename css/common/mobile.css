@@ -69,8 +69,8 @@
 		{
 			width: 65%;
 			height: 100dvh;
-			position: absolute;
-			top: -35px;
+			position: fixed;
+			top: 0;
 			right: 0;
 			z-index: 1;
 			background-color: var(--bg-transparent-color-white);
@@ -78,6 +78,20 @@
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
+
+			& > noscript
+			{
+				position: inherit;
+				bottom: 15px;
+				left: 5%;
+				text-align: center;
+				color: var(--color-white);
+				
+				&::before
+				{
+					content: 'JavaScript must be enabled to open and close menu'
+				}
+			}
 
 			& :is(#img, #hr)
 			{
